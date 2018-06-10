@@ -1,6 +1,7 @@
 import java.util.*;
 import java.io.*;
 
+//Palindrome Count
 class palindromeCount
 {
     public static boolean isPalindrome(int x) 
@@ -36,10 +37,11 @@ class palindromeCount
     {
         Scanner sc=new Scanner(System.in);
         int n=sc.nextInt();
+        System.out.println("The result is as follows");
         int a=Math.abs(n);
         if(isPalindrome(a))
         {
-            System.out.println("It's a Palindrome"); 
+            System.out.println("It's not a Palindrome"); 
         }
         else
         {
