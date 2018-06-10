@@ -41,11 +41,7 @@ class palindromeCount
         int a=Math.abs(n);
         if(isPalindrome(a))
         {
-<<<<<<< HEAD
             System.out.println("It's a Palindrome! Yolo!"); 
-=======
-            System.out.println("It's not a Palindrome"); 
->>>>>>> test
         }
         else
         {
