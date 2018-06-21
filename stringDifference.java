@@ -1,25 +1,18 @@
-
-import java.util.*;
-
 class Solution {
-	public static char findTheDifference(String s, String t) {
-           HashMap<Character, Integer> h1 = new HashMap<Character, Integer>();
-char[] a = s.toCharArray();
-	for(int i=0; i<a.length; i++)
-		h1.put(a[i], 1);
-	char[] b = t.toCharArray();
-	foreach(char p in b)
-		if(!h1.containsKey(p))
-			return p;
-
-    	}
-
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		String s1 = sc.nextLine();
-		String t1 = sc.nextLine();
-		String r1 = s1.tLowerCase();
-		String r2 = t1.toLowerCase();
-		System.out.print(findTheDifference(r1, r2));
-	}
+    public char findTheDifference(String s, String t) {
+        int totalS = 0, totalT = 0;
+        
+        // total ascii for string s
+        for (int i = 0; i < s.length(); i++){
+            totalS += (int) s.charAt(i);
+        }
+        
+        // total ascii for string t
+        for (int i = 0; i < t.length(); i++){
+            totalT += (int) t.charAt(i);
+        }
+        
+        // subtract the new string from the old string to get the new added char
+        return (char) (totalT - totalS);
+    }
 }
