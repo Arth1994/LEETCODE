@@ -2,24 +2,15 @@ import java.util.*;
 
 class twoSumSorted {
 
-    public static int[] twoSum(int[] numbers, int target) {
-
-        int[] indices = new int[numbers.length];
-        int count = 0;
+    public static int[] twoSum(int[] numbers, int target) 
+    {
         int[] ans = new int[2];
 
         for (int i = 0; i < numbers.length; i++) {
-            if ((numbers[i] <= target) || (numbers[i] == 0)) {
-                indices[count] = numbers[i];
-                count++;
-            }
-        }
-
-        for (int i = 0; i < count; i++) {
-            for (int j = 0; j < count; j++) {
+            for (int j = 0; j < numbers.length; j++) {
                 if (i != j) {
-                    if ((indices[i] + indices[j] == target)) {
-                        if (indices[i] < indices[j]) {
+                    if ((numbers[i] + numbers[j] == target)) {
+                        if (numbers[i] < numbers[j]) {
                             ans[0] = i + 1;
                             ans[1] = j + 1;
                         } else {
@@ -30,10 +21,6 @@ class twoSumSorted {
                 }
             }
         }
-
-        System.out.print(ans[0]);
-        System.out.print(ans[1]);
-
         return ans;
     }
 
