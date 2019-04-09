@@ -23,8 +23,9 @@ class TicTacToe{
             player = player == 0 ? -1 : 1;
             if(player == 0){
                 board[row][col] = -1;
-            }else
+            }else{
                 board[row][col] = 1;
+            }
                 boolean rowResult = true, colResult = true, diagResult = true, revDiagResult = true;
                 for(int i = 0; i < n; i++){
                     if(board[row][i] != player){
